@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ratpack
 
 a simple boilerplate for creating production-ready sinatra apps that use activerecord and sqlite
@@ -21,3 +22,7 @@ if ya want haml and sass, be on the look for classy.
 ### Development
    * [shotgun](https://github.com/rtomayko/shotgun)
    * [tux](http://tagaholic.me/2011/04/10/tux-a-sinatra-console.html)
+=======
+fun_quiz
+========
+>>>>>>> e32d0b9c8396562f5146e2ca1b54db60d3713dd0
