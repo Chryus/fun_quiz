@@ -1,4 +1,22 @@
-body {
+  .irish {
+    color: green;
+  }
+
+  .english {
+    color: blue;
+  }
+
+  #left {
+    float: left;
+    margin-left: 600px;
+  }
+
+  #right {
+    float: right;
+    margin-right: 600px;
+  }
+
+  body {
   background: black;
   font-weight: 400;
   padding-top: 30px;
@@ -22,13 +40,14 @@ body {
 h1, h2, h3 {
   font-family: 'Oswald', Helvetica, Arial, sans-serif;
   line-height: 1em;
-  text-align: right;
+  text-align: center;
 }
 h1 {
   font-weight: 900;
   font-style: italic;
   color: yellow;
   font-size: 200px;
+  text-align: center;
 }
 h2 {
   font-weight: 400;
