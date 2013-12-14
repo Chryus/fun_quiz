@@ -1,3 +1,19 @@
+  input[type=radio]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(4); /* IE */
+  -moz-transform: scale(4); /* FF */
+  -webkit-transform: scale(4); /* Safari and Chrome */
+  -o-transform: scale(10); /* Opera */
+  margin-right: 30px;
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+  }
+
   .irish {
     color: green;
   }
@@ -6,15 +22,15 @@
     color: blue;
   }
 
-  #left {
-    float: left;
-    margin-left: 600px;
+  #standoff {
+    text-align: center
   }
 
-  #right {
-    float: right;
-    margin-right: 600px;
-  }
+IMG.quiz1 {
+   padding: 50px;
+   height: 900px;
+}
+
 
   body {
   background: black;
@@ -75,4 +91,11 @@ pre {
 }
 #github {
   z-index: 2;
+}
+
+li {
+  font-size: 40px;
+  margin-top: 30px;
+  color: white;
+  list-style: none;
 }

@@ -1,27 +1,37 @@
 require 'bundler'
 Bundler.require
+Dir.glob('./lib/*.rb') do |model|
+  require model
+end
 
 module IrishEnglish
   class App < Sinatra::Application
 
+    before do
+      @images = Dir["./img/*"]
+    end
+   
     get '/' do
-      erb :index
+     erb :index
+    end
+
+    get '/home' do
+      erb :home
     end
 
     get '/quiz' do
+      @quiz = Quiz.new
       erb :quiz
     end
 
-    # get '/:form_type' do
-    #   erb params[:form_type].to_sym
-    # end 
+    post '/results' do
+      @results = params["Q1"]
+      erb :results
+    end
 
-    # post '/:form_type' do
-    #   erb :results
-    # end
   end
-end
 
+end
 
 
 #     #helpers
