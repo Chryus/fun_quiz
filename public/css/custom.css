@@ -11,7 +11,8 @@
 IMG.displayed {
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto;
+    height: 599; 
   }
 
   .irish {

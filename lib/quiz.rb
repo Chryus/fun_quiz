@@ -2,10 +2,9 @@ class Quiz < ActiveRecord::Base
 
  		attr_accessor :image 
 
- 		IMAGES = Dir["/img/*"]
+ 		IMAGES = Dir["./public/img/*"].sample[9..-1]
 
  		def initialize
- 			@image = Dir["../img/*"].sample
  		end
 
 end

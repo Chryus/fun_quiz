@@ -1,8 +1,13 @@
 <h1>choose your poison</h1>
 
+<li><%= @images.inspect %><li>
+
 <div id="standoff">
-	<img class="quiz1" id="kate" src="../img/bush.jpg"></a>
-	<img class="quiz1" id="sinead" src="../img/oconner.jpg"></a>
+<!-- 	<img class="quiz1" id="kate" src="img/bush.jpg">
+	<img class="quiz1" id="sinead" src="img/oconner.jpg"> -->
+
+<img class="quiz1" src= "<%= @images[0] %>">
+<img class="quiz1" src= "<%= @images[9] %>">
 
 
 <form id="quiz1" action="/results" method="POST">

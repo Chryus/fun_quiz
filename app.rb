@@ -8,7 +8,7 @@ module IrishEnglish
   class App < Sinatra::Application
 
     before do
-      @images = Dir["./img/*"]
+      @images = Dir["./public/img/*"]
     end
    
     get '/' do
@@ -20,7 +20,9 @@ module IrishEnglish
     end
 
     get '/quiz' do
-      @quiz = Quiz.new
+      @images.collect! do |image|
+        image[9..-1]
+      end
       erb :quiz
     end
 
