@@ -8,7 +8,10 @@ module IrishEnglish
   class App < Sinatra::Application
     enable :sessions
     before do
-      @images = Dir["./public/img/*"]
+      @files = Dir["./public/img/*"]
+      @images = @files.collect! {|image| image[9..-1]}  
+      #@names = @images.collect! {|image| image[6..-5].capitalize} 
+      #@pairs = @images.each_slice(2).to_a
     end
    
     get '/' do
@@ -20,9 +23,16 @@ module IrishEnglish
     end
 
     get '/quiz' do
-      @images = @images.collect! {|image| image[9..-1]}
-      erb :quiz
+      session['id'] ||= 0
+        if session['id'] < 11
+          session['id'] += 2 
+        else
+          session['id'] = 2
+        end
+        erb :quiz
     end
+      
+  
 
     post '/results' do
       @results = params["Q1"]
@@ -30,7 +40,6 @@ module IrishEnglish
     end
 
   end
-
 end
 
 

@@ -1,9 +1,9 @@
 <h1> you're having... </h1>
 
-	<% if @results == "1" %>
-	 		<IMG class="displayed" id="english_breakfast" src="../img/13english.jpg">
-	<% else %>
-			<IMG class="displayed" id="irish_breakfast" src="../img/14irish.jpg">
+	<% if @results == "*" %>
+	 		<IMG class="displayed" id="english_breakfast" src="../img/12english.jpg">
+	<% elsif @results == "^" %>
+			<IMG class="displayed" id="irish_breakfast" src="../img/13irish.jpg">
 	<% end %>
 
 <h2 id="play_again"><a href="/quiz">play again?</a></h2> 

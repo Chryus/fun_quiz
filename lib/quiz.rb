@@ -2,11 +2,17 @@ class Quiz < ActiveRecord::Base
 
  		attr_accessor :image_pair
 
- 		#IMAGES = Dir["./public/img/*"].sample[9..-1]
+ 		IMAGES = Dir["./public/img/*"].sample[9..-1]
 
  		def initialize
 
  		end
+
+ 		def image_pairs
+ 			@files = Dir["./public/img/*"]
+      @images = @files.collect! {|image| image[9..-1]}
+      IMAGES << @images.each_slice(2).to_a
+    end
 
 end
 
