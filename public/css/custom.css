@@ -1,5 +1,4 @@
-  input[type=radio]
-{
+input[type=radio] {
   /* Double-sized Checkboxes */
   -ms-transform: scale(4); /* IE */
   -moz-transform: scale(4); /* FF */
@@ -15,16 +14,20 @@ IMG.displayed {
     height: 599; 
   }
 
-  .irish {
+.irish {
     color: green;
   }
 
-  .english {
+.english {
     color: blue;
   }
 
-  #standoff {
+#standoff {
     text-align: center
+  }
+
+#play_again {
+    margin-top: 50px;
   }
 
 IMG.quiz1 {
@@ -32,8 +35,7 @@ IMG.quiz1 {
    height: 900px;
 }
 
-
-  body {
+body {
   background: black;
   font-weight: 400;
   padding-top: 30px;

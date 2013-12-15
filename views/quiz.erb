@@ -1,25 +1,22 @@
 <h1>choose your poison</h1>
 
-<li><%= @images.inspect %><li>
-
 <div id="standoff">
-<!-- 	<img class="quiz1" id="kate" src="img/bush.jpg">
-	<img class="quiz1" id="sinead" src="img/oconner.jpg"> -->
 
 <img class="quiz1" src= "<%= @images[0] %>">
-<img class="quiz1" src= "<%= @images[9] %>">
-
+<img class="quiz1" src= "<%= @images[1] %>">	
 
 <form id="quiz1" action="/results" method="POST">
 	<ul>
 	<li><label for="POST-item"></label>
 	  <input type="radio" id="Q1" name="Q1" value="1">Kate Bush</input></li>
-	 <li><input type="radio" id="Q1" name="Q1" value="-1">Sinead O'conner</input></li>
+	 <li><input type="radio" id="Q1" name="Q1" value="-1">Sinead O'Conner</input></li>
 	</ul>
 </br>
 	<button type="submit" value="Submit">Submit</button>
 </form>
 
 </div>
+
+
 
 

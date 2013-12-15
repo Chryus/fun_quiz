@@ -6,7 +6,7 @@ end
 
 module IrishEnglish
   class App < Sinatra::Application
-
+    enable :sessions
     before do
       @images = Dir["./public/img/*"]
     end
@@ -20,9 +20,7 @@ module IrishEnglish
     end
 
     get '/quiz' do
-      @images.collect! do |image|
-        image[9..-1]
-      end
+      @images = @images.collect! {|image| image[9..-1]}
       erb :quiz
     end
 
@@ -34,6 +32,19 @@ module IrishEnglish
   end
 
 end
+
+
+# <% if session[:id].nil? %>
+#   <img class="quiz1" src= "<%= @images[0] %>">
+#   <img class="quiz1" src= "<%= @images[1] %>">  
+# <% else%>
+# <% session[:id] = 1 %>
+#   <% while session[:id] < 13 %>
+#   <img class="quiz1" src= "<%= @images[session[:id]] %>">
+#   <img class="quiz1" src= "<%= @images[session[:id] + 1] %>">
+#   <% session[:id]+= 1 %>
+#   <% end %>
+# <% end %>
 
 
 #     #helpers
