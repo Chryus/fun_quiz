@@ -10,8 +10,6 @@ module IrishEnglish
     before do
       @files = Dir["./public/img/*"]
       @images = @files.collect! {|image| image[9..-1]}  
-      #@names = @images.collect! {|image| image[6..-5].capitalize} 
-      #@pairs = @images.each_slice(2).to_a
     end
    
     get '/' do

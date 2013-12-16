@@ -8,12 +8,6 @@ class Quiz < ActiveRecord::Base
 
  		end
 
- 		def image_pairs
- 			@files = Dir["./public/img/*"]
-      @images = @files.collect! {|image| image[9..-1]}
-      IMAGES << @images.each_slice(2).to_a
-    end
-
 end
 
 #quiz = Quiz.new

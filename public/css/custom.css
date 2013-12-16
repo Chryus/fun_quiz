@@ -11,7 +11,9 @@ IMG.displayed {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 599; 
+    height: 900px;
+    width: 800px;
+    margin-top: -50px; 
   }
 
 .irish {
@@ -23,7 +25,7 @@ IMG.displayed {
   }
 
 #standoff {
-    text-align: center
+    text-align: center;
   }
 
 #play_again {
@@ -33,12 +35,13 @@ IMG.displayed {
 IMG.pair {
    padding: 50px;
    height: 900px;
+   margin-top: -100px;
 }
 
 body {
   background: black;
   font-weight: 400;
-  padding-top: 30px;
+  padding-top: 50px;
 }
 .background {
   position: fixed;
