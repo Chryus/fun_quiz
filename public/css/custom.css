@@ -7,7 +7,7 @@ input[type=radio] {
   margin-right: 30px;
 }
 
-IMG.displayed {
+.displayed {
     display: block;
     margin-left: auto;
     margin-right: auto;
