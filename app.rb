@@ -28,9 +28,7 @@ module IrishEnglish
           session['id'] = 2
         end
         erb :quiz
-    end
-      
-  
+    end 
 
     post '/results' do
       @results = params["Q1"]
@@ -41,22 +39,4 @@ module IrishEnglish
 end
 
 
-# <% if session[:id].nil? %>
-#   <img class="quiz1" src= "<%= @images[0] %>">
-#   <img class="quiz1" src= "<%= @images[1] %>">  
-# <% else%>
-# <% session[:id] = 1 %>
-#   <% while session[:id] < 13 %>
-#   <img class="quiz1" src= "<%= @images[session[:id]] %>">
-#   <img class="quiz1" src= "<%= @images[session[:id] + 1] %>">
-#   <% session[:id]+= 1 %>
-#   <% end %>
-# <% end %>
-
-
-#     #helpers
-#     helpers do
-#       def partial(file_name)
-#         erb file_name, :layout => false
-#       end
 
