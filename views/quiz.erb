@@ -3,7 +3,7 @@
 <div id="standoff">
 
 <h2><%= session['id'].inspect%></h2>
-<h2><%= @images.sort %></h2>
+<h2><%= @images.sort! %></h2>
 
 <img class="pair" src= "<%= @images[session['id']-2] %>">
 <img class="pair" src= "<%= @images[session['id']-1] %>">
@@ -12,13 +12,13 @@
 <form id="quiz1" action="/results" method="POST">
 	<ul>
 	<li><label for="POST-item"></label>
-	  <input type="radio" id="Q1" name="Q1" value="<%= @images.sort[session['id']-2][-5] %>">
-	  	<%= "#{@images.sort[session['id']-2][6..-6].capitalize}" %>
+	  <input type="radio" id="Q1" name="Q1" value="<%= @images.sort![session['id']-2][-5] %>">
+	  	<%= "#{@images.sort![session['id']-2][6..-6].capitalize}" %>
 	  </input>
 	</li>
 	<li>
-	 	<input type="radio" id="Q1" name="Q1" value="<%= @images.sort[session['id']-1][-5] %>">
-	 		<%= "#{@images.sort[session['id']-1][6..-6].capitalize}" %>
+	 	<input type="radio" id="Q1" name="Q1" value="<%= @images.sort![session['id']-1][-5] %>">
+	 		<%= "#{@images.sort![session['id']-1][6..-6].capitalize}" %>
 	 	</input>
 	</li>
 	</ul>
