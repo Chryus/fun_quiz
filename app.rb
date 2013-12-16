@@ -9,7 +9,7 @@ module IrishEnglish
     enable :sessions
     before do
       @files = Dir["./public/img/*"]
-      @images = @files.collect! {|image| image[9..-1]}  
+      @images = @files.collect! {|image| image[9..-1]}.reverse  
     end
    
     get '/' do
