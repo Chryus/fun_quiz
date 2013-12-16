@@ -2,9 +2,6 @@
 
 <div id="standoff">
 
-<h2><%= session['id'].inspect%></h2>
-<h2><%= @images.sort! %></h2>
-
 <img class="pair" src= "<%= @images[session['id']-2] %>">
 <img class="pair" src= "<%= @images[session['id']-1] %>">
 
