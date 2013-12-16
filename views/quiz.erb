@@ -2,7 +2,7 @@
 
 <div id="standoff">
 
-<h2><%=[session['id']%></h2>
+<h2><%=[session['id'].inspect%></h2>
 <h2><%= @images.inspect %></h2>
 
 <img class="pair" src= "<%= @images[session['id']-2] %>">
