@@ -4,8 +4,8 @@
 
 <%= @images.sort! %>
 
-<img class="pair" src= "<%= @images[session['id']-2] %>">
-<img class="pair" src= "<%= @images[session['id']-1] %>">
+<img class="pair" src="<%= @images[session['id']-2] %>">
+<img class="pair" src="<%= @images[session['id']-1] %>">
 
 
 <form id="quiz1" action="/results" method="POST">
